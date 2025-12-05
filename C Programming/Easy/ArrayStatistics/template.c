@@ -14,7 +14,12 @@ int calculateAboveOrEqualsAverage(int nums[], int numsSize);
  */ 
  
 int calculateSum(int nums[], int numsSize) {
-    // TODO: Implement this method
+    int sum = 0;
+    int index = 0; 
+    for (index = 0; index < numsSize; index++){
+         sum+= nums[index];
+    }
+    return sum;
 }
 
 
@@ -26,7 +31,9 @@ int calculateSum(int nums[], int numsSize) {
  */ 
  
 double calculateAverage(int nums[], int numsSize) {
-    // TODO: Implement this method
+    int sum = calculateSum(nums[], numsSize);
+    double average = (double)sum/numsSize;
+    return average;
 }
 
 
@@ -38,7 +45,15 @@ double calculateAverage(int nums[], int numsSize) {
  */ 
  
 int calculateAboveOrEqualsAverage(int nums[], int numsSize) {
-    // TODO: Implement this method
+     double average = calculateAverage(nums[],numsSize);
+     int index = 0;
+     int count = 0;
+     for (index = 0; index < numsSize; index++){
+      if (average<=nums[index]){
+       count++;
+      }
+     }
+ return count;
 }
 
 
